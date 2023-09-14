@@ -32,6 +32,7 @@
                         <th scope="col">Tipo</th>
                         <th scope="col">Artisti</th>
                         <th scope="col">Scrittori</th>
+                        <th scope="col">Azione</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,11 +47,11 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->artists }}</td>
                             <td>{{ $comic->writers }}</td>
-                            {{-- <td>
-                                <a href="{{ route('pastas.show', ['pasta' => $pasta->id]) }}" class="btn btn-primary">
-                                    Vedi
+                            <td>
+                                <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                                    Singolo Film
                                 </a>
-                            </td> --}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
