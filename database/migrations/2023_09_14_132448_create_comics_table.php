@@ -17,11 +17,12 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('thumb',1024)->nullable();
             $table->unsignedDecimal('price', 6, 2);
-            $table->string('series',32);
+            $table->string('series',100);
             $table->date('sale_date',64);
             $table->string('type',32);
-            $table->string('artists',1024)->nullable();
-            $table->string('writers',1024)->nullable();
+            $table->text('artists')->nullable();
+            $table->text('writers')->nullable();
+            $table->timestamps();
         });
     }
 
