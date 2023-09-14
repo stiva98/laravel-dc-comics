@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//Controllers
+use App\Http\Controllers\ComicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,18 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [ComicController::class, 'home'])->name('home');
 
-Route::get('/contatti', function () {
-    return view('contatti');
-})->name('contatti');
+Route::get('/contatti', [ComicController::class, 'contatti'])->name('contatti');
 
-Route::get('/chi_siamo', function () {
-    return view('chi_siamo');
-})->name('chi_siamo');
+Route::get('/chi_siamo', [ComicController::class, 'chi_siamo'])->name('chi_siamo');
 
-Route::get('/documentazione', function () {
-    return view('documentazione');
-})->name('documentazione');
+Route::get('/documentazione', [ComicController::class, 'documentazione'])->name('documentazione');
+
+Route::resource('comics', ComicController::class);

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Models
+use App\Models\Comic;
+
+
 class ComicController extends Controller
 {
     /**
@@ -11,7 +15,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+
+        return view('admin.comics.index', compact('comics'));
     }
 
     /**
@@ -60,5 +66,25 @@ class ComicController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function home()
+    {
+        return view('home');
+    }
+
+    public function contatti()
+    {
+        return view('contatti');
+    }
+
+    public function chi_siamo()
+    {
+        return view('chi_siamo');
+    }
+
+    public function documentazione()
+    {
+        return view('documentazione');
     }
 }
