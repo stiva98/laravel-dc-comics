@@ -1,10 +1,10 @@
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<header class="header-bg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="row w-100 justify-content-center align-items-center">
                 <div class="col-8">
                     <a class="navbar-brand" href="{{ route('home') }}">
-                        <img class="width-img" src="" alt="Laravel">
+                        <img class="width-img" src="{{ asset('img/logo.jpeg') }}" alt="DC Comics">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -14,13 +14,13 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ route('contatti') }}">Contatti</a>
+                                <a class="nav-link text-white" href="{{ route('contatti') }}">Contatti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('chi_siamo') }}">Chi siamo</a>
+                                <a class="nav-link text-white" href="{{ route('chi_siamo') }}">Chi siamo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('documentazione') }}">Documentazione</a>
+                                <a class="nav-link text-white" href="{{ route('documentazione') }}">Documentazione</a>
                             </li>
                         </ul>
                     </div>

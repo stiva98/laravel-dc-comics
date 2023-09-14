@@ -1,1 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
+.header-bg {
+    background-color: #7531f9;
+
+    .width-img {
+        width: 40px;
+    }
+    .text-white:hover {
+        color: gold !important;
+    }
+}
