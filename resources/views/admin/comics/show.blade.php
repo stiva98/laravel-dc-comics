@@ -31,6 +31,12 @@
                         <div>
                             Data d'uscita: <strong>{{ $comic->sale_date }}</strong>
                         </div>
+                        <div>
+                            Artisti: <strong>{{ $comic->artists }}</strong>
+                        </div>
+                        <div>
+                            Scrittori: <strong>{{ $comic->writers }}</strong>
+                        </div>
                         <div class="border border-success p-2 mb-2 border-opacity-50 rounded">
                             Descrizione: <strong>{{ $comic->description }}</strong>
                         </div>

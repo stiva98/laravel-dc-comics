@@ -14,11 +14,11 @@
     </div>
 
     <div class="row">
-        {{-- <div class="col-12 mb-4">
-            <a href="{{ route('pastas.create') }}" class="btn btn-success w-100">
+        <div class="col-12 mb-4">
+            <a href="{{ route('comics.create') }}" class="btn btn-warning w-100">
                 + Aggiungi
             </a>
-        </div> --}}
+        </div>
         <div class="col-12">
             <table class="table">
                 <thead>
