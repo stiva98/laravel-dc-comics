@@ -101,26 +101,4 @@ class ComicController extends Controller
         $comic ->delete();
         return redirect() ->route('comics.index');
     }
-
-    public function home()
-    {
-        $comics = Comic::all();
-        
-        return view('home', compact('comics'));
-    }
-
-    public function contatti()
-    {
-        return view('contatti');
-    }
-
-    public function chi_siamo()
-    {
-        return view('chi_siamo');
-    }
-
-    public function documentazione()
-    {
-        return view('documentazione');
-    }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+{{-- @extends('layouts.main')
 
 @section('page-title', 'Documentazione')
 
@@ -8,4 +8,4 @@
     Documentazione
 </h1>
 
-@endsection
+@endsection --}}

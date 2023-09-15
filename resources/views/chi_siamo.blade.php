@@ -1,4 +1,4 @@
-@extends('layouts.main')
+{{-- @extends('layouts.main')
 
 @section('page-title', 'Chi siamo')
 
@@ -8,4 +8,4 @@
     Chi siamo
 </h1>
 
-@endsection
+@endsection --}}

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//Models
+use App\Models\Comic;
+
 
 //Controllers
 use App\Http\Controllers\ComicController;
@@ -16,12 +19,21 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-Route::get('/', [ComicController::class, 'home'])->name('home');
+Route::get('/',  function() {
+    $comics = Comic::all();
+    return view('home', compact('comics'));
+})->name('home');
 
-Route::get('/contatti', [ComicController::class, 'contatti'])->name('contatti');
+// Route::get('/contatti', function() {
+//     return view('contatti');
+// })->name('contatti');
 
-Route::get('/chi_siamo', [ComicController::class, 'chi_siamo'])->name('chi_siamo');
+// Route::get('/chi_siamo', function() {
+//     return view('chi_siamo');
+// })->name('chi_siamo');
 
-Route::get('/documentazione', [ComicController::class, 'documentazione'])->name('documentazione');
+// Route::get('/documentazione', function() {
+//     return view('contatti');
+// })->name('documentazione');
 
 Route::resource('comics', ComicController::class);

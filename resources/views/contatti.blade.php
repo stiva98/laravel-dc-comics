@@ -1,4 +1,4 @@
-@extends('layouts.main')
+{{-- @extends('layouts.main')
 
 @section('page-title', 'Contatti')
 
@@ -6,4 +6,4 @@
 <h1>
     Contatti
 </h1>
-@endsection
+@endsection --}}
