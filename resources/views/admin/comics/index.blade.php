@@ -47,9 +47,12 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->artists }}</td>
                             <td>{{ $comic->writers }}</td>
-                            <td>
-                                <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                            <td class="d-flex border-bottom-0">
+                                <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-warning me-2">
                                     Singolo Film
+                                </a>
+                                <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-success">
+                                    Modifica
                                 </a>
                             </td>
                         </tr>
