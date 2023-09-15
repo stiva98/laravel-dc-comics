@@ -15,8 +15,11 @@
 
     <div class="row">
         <div class="col-12 mb-4">
-            <a href="{{ route('comics.create') }}" class="btn btn-warning w-100">
+            <a href="{{ route('comics.create') }}" class="btn btn-warning w-100 mb-3">
                 + Aggiungi
+            </a>
+            <a href="{{ route('home') }}">
+                - Torna indietro
             </a>
         </div>
         <div class="col-12">

@@ -27,7 +27,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Inserisci prezzo <strong class="color-strong">*</strong></label>
-                    <input type="number" min="1" max="1000" class="form-control" id="price" name="price" placeholder="Inserisci prezzo..." required>
+                    <input type="number" step="0.01" min="1" max="1000" class="form-control" id="price" name="price" placeholder="Inserisci prezzo..." required>
                 </div>
                 <div class="mb-3">
                     <label for="series" class="form-label">Inserisci serie <strong class="color-strong">*</strong></label>
