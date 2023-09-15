@@ -51,9 +51,16 @@
                                 <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-warning me-2">
                                     Singolo Film
                                 </a>
-                                <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-success">
+                                <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-success me-2">
                                     Modifica
                                 </a>
+                                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                    <button type="submit" class="btn btn-danger pb-5">
+                                        Elimina
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
