@@ -45,7 +45,23 @@ class ComicController extends Controller
             'artists' => 'nullable|string',
             'writers' => 'nullable|string',
             'description' => 'nullable|string'
-        ]);
+        ],
+        [
+            'thumb.max' => "L'immagine può contenere al massimo 1024 caratteri!",
+            'title.required' => 'Inserire il titolo è obbligatorio!',
+            'title.max' => 'Inserire il titolo con massimo 64 caratteri!',
+            'price.required' => 'Inserire il prezzo è obbligatorio!',
+            'price.numeric' => 'Inserire il prezzo in valore numerico!',
+            'price.min' => 'Inserire il prezzo con valore minimo di €1,00!',
+            'price.max' => 'Inserire il prezzo con valore massimo di €1000,00!',
+            'series.required' => 'Inserire la serie è obbligatorio!',
+            'series.max' => 'Inserire una serie con massimo 100 caratteri!',
+            'type.required' => 'Inserire il tipo è obbligatorio!',
+            'type.max' => 'Inserire il tipo con massimo 32 caratteri!',
+            'sale_date.required' => 'Inserire la data è obbligatorio!',
+            'sale_date.date' => 'Inserire la data in valore numerico es.(GG/MM/AA) - (01/01/2021)!',
+            'sale_date.after_or_equal' => 'Inserire la data corrente o prossima!'
+        ]); 
 
         $formData = $request->all();
 
@@ -96,10 +112,25 @@ class ComicController extends Controller
             'price' => 'required|numeric|min:1|max:1000',
             'series' => 'required|max:100',
             'type' => 'required|max:32',
-            'sale_date' => 'required|date|after_or_equal:today',
+            'sale_date' => 'required|date',
             'artists' => 'nullable|string',
             'writers' => 'nullable|string',
             'description' => 'nullable|string'
+        ],
+        [
+            'thumb.max' => "L'immagine può contenere al massimo 1024 caratteri!",
+            'title.required' => 'Inserire il titolo è obbligatorio!',
+            'title.max' => 'Inserire il titolo con massimo 64 caratteri!',
+            'price.required' => 'Inserire il prezzo è obbligatorio!',
+            'price.numeric' => 'Inserire il prezzo in valore numerico!',
+            'price.min' => 'Inserire il prezzo con valore minimo di €1,00!',
+            'price.max' => 'Inserire il prezzo con valore massimo di €1000,00!',
+            'series.required' => 'Inserire la serie è obbligatorio!',
+            'series.max' => 'Inserire una serie con massimo 100 caratteri!',
+            'type.required' => 'Inserire il tipo è obbligatorio!',
+            'type.max' => 'Inserire il tipo con massimo 32 caratteri!',
+            'sale_date.required' => 'Inserire la data è obbligatorio!',
+            'sale_date.date' => 'Inserire la data in valore numerico es.(GG/MM/AA) - (01/01/2021)!',
         ]);
 
         $comic = Comic::findOrFail($id);
